@@ -13,8 +13,5 @@ public class UpaLista {
 	public void setLstDetalle(ArrayList<Columna> lstDetalle) {
 		this.lstDetalle = lstDetalle;
 	} 
-	
-	
-	//comentado
-	//fdfgd
+	//eliminando tu veneno
 }
