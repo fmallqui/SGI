@@ -95,7 +95,9 @@
 
 
 					<p:commandLink id="idDivCartas" styleClass="botonActivadoArbitrio"
-						style="background-color: #fed02e;">
+						style="background-color: #fed02e;"
+						onclick="window.location.href='/sistemaSBLM/pages/pgRecaudacionAutovaluoRegistroReporte.jsf'">
+
 						<div class="btncentrado">Reporte</div>
 					</p:commandLink>
 					<p:commandLink id="idDivRegistro"
@@ -117,32 +119,33 @@
 							<!-- ########################### PANEL  ###################### -->
 							<div id="idpanel_recauAutovaluoRegistro"
 								class="recau_panelPendientes">
-								<h:form >
-								<div class="registroArbitrioCabeceraSubPestania">
+								<h:form>
+									<div class="registroArbitrioCabeceraSubPestania">
 
-									<p:commandLink id="idDivR" styleClass="btnRegistroArbitrio"
-										style="background-color: #4ABBF4;"
-										update=":idTablaConsultaArbitrio:contenido,:idTablaConsultaArbitrio:mensajex"
-										actionListener="#{recaudacionautovaluoarbitrioMB.listarArbitrioConsulta}"
-										oncomplete="subTabConsulta_recauAutovaluo_Arbitrio()">
-										<div class="btncentrado" style="margin-top: 3px;">
-											Consulta
-											<p:graphicImage width="20" height="20"
-												value="../resources/images/recaudacion/autovaluo/buscarRegistro.png" />
-										</div>
-									</p:commandLink>
-									<p:commandLink id="idDiv" styleClass="btnRegistroArbitrio"
-										onclick="subTabRegistro_recauAutovaluo_Arbitrio();">
-										<div class="btncentrado" style="margin-top: 3px;">
-											Registro
-											<p:graphicImage width="20" height="20"
-												value="../resources/images/recaudacion/autovaluo/nuevoregistro.png" />
-										</div>
-									</p:commandLink>
+										<p:commandLink id="idDivR" styleClass="btnRegistroArbitrio"
+											style="background-color: #4ABBF4;"
+											update=":idTablaConsultaArbitrio:contenido,:idTablaConsultaArbitrio:mensajex"
+											actionListener="#{recaudacionautovaluoarbitrioMB.listarArbitrioConsulta}"
+											oncomplete="subTabConsulta_recauAutovaluo_Arbitrio()">
+											<div class="btncentrado" style="margin-top: 3px;">
+												Consulta
+												<p:graphicImage width="20" height="20"
+													value="../resources/images/recaudacion/autovaluo/buscarRegistro.png" />
+											</div>
+										</p:commandLink>
+										<p:commandLink id="idDiv" styleClass="btnRegistroArbitrio"
+											onclick="subTabRegistro_recauAutovaluo_Arbitrio();">
+											<div class="btncentrado" style="margin-top: 3px;">
+												Registro
+												<p:graphicImage width="20" height="20"
+													value="../resources/images/recaudacion/autovaluo/nuevoregistro.png" />
+											</div>
+										</p:commandLink>
 
-								</div>
+									</div>
 								</h:form>
-								<div id="idsubpanel_recauAutovaluoRegistro" style="margin-left:30px;">
+								<div id="idsubpanel_recauAutovaluoRegistro"
+									style="margin-left: 30px;">
 									<h:form id="formPanelRegistroArbitrio">
 
 										<div class="registroArbitrioSubPestaniaIzquierdo">
@@ -153,9 +156,9 @@
 												<h:panelGrid columns="2">
 													<h:outputText value="Registro de Arbitrio" />
 													<p:commandLink oncomplete="iddlgListaUpa.show();">
-													<p:graphicImage width="20" height="20"
-														value="/resources/images/upa/verInmueble.png" 
-														alt="Nuevo" title="limpiar" style="margin-left:10px;" /> 
+														<p:graphicImage width="20" height="20"
+															value="/resources/images/upa/verInmueble.png" alt="Nuevo"
+															title="limpiar" style="margin-left:10px;" />
 													</p:commandLink>
 												</h:panelGrid>
 
@@ -163,7 +166,8 @@
 											<p:spacer height="20" />
 											<h:panelGrid columns="2" style="height:45px;">
 												<h:panelGrid columns="1">
-													<h:outputText value="Clave Upa" style="color: #4C4C4C;font-size:13px;"/>
+													<h:outputText value="Clave Upa"
+														style="color: #4C4C4C;font-size:13px;" />
 													<h:outputText id="idclave" style="width:200px;"
 														value="#{recaudacionautovaluoarbitrioMB.contratoSeleccionado.upa.idupa}" />
 												</h:panelGrid>
@@ -172,7 +176,8 @@
 
 											<h:panelGrid id="locacion" columns="3" style="height:45px;">
 												<h:panelGrid columns="1">
-													<h:outputText value="Departamento" style="color: #4C4C4C;font-size:13px;"/>
+													<h:outputText value="Departamento"
+														style="color: #4C4C4C;font-size:13px;" />
 													<h:outputText style="width: 150px;  font-size: 11px;"
 														id="cbxLstDptos" readonly="true"
 														value="#{recaudacionautovaluoarbitrioMB.contratoSeleccionado.upa.ubigeo.depa}">
@@ -181,7 +186,8 @@
 												</h:panelGrid>
 
 												<h:panelGrid columns="1" style="margin-left:20px;">
-													<h:outputText value="Provincia" style="color: #4C4C4C;font-size:13px;" />
+													<h:outputText value="Provincia"
+														style="color: #4C4C4C;font-size:13px;" />
 
 													<h:outputText id="idcomboprovincia" readonly="true"
 														style="width: 150px;  font-size: 11px;"
@@ -190,7 +196,8 @@
 												</h:panelGrid>
 
 												<h:panelGrid columns="1" style="margin-left:30px;">
-													<h:outputText value="Distrito" style="color: #4C4C4C;font-size:13px;" />
+													<h:outputText value="Distrito"
+														style="color: #4C4C4C;font-size:13px;" />
 													<h:outputText id="idcombodistrito" readonly="true"
 														style="width: 150px;  font-size: 11px;"
 														value="#{recaudacionautovaluoarbitrioMB.contratoSeleccionado.upa.ubigeo.dist}">
@@ -203,8 +210,10 @@
 
 											<h:panelGrid columns="3" style="height:45px;">
 												<h:panelGrid columns="1" style="margin-left:0px;">
-													<h:outputText value="Dirección" style="color: #4C4C4C;font-size:13px;"/>
-													<h:outputText id="idintdtostand" style="width:300px;" readonly="true"
+													<h:outputText value="Dirección"
+														style="color: #4C4C4C;font-size:13px;" />
+													<h:outputText id="idintdtostand" style="width:300px;"
+														readonly="true"
 														value="#{recaudacionautovaluoarbitrioMB.contratoSeleccionado.upa.direccion}" />
 												</h:panelGrid>
 
@@ -212,7 +221,8 @@
 
 											<h:panelGrid columns="3" style="height:45px;">
 												<h:panelGrid columns="1">
-													<h:outputText value="Uso:" style="color: #4C4C4C;font-size:13px;"/>
+													<h:outputText value="Uso:"
+														style="color: #4C4C4C;font-size:13px;" />
 													<h:outputText id="idcombouso"
 														style="width: 120px;  font-size: 11px;" readonly="true"
 														value="#{recaudacionautovaluoarbitrioMB.contratoSeleccionado.upa.uso.descripcion}">
@@ -221,7 +231,8 @@
 
 												</h:panelGrid>
 												<h:panelGrid columns="1" style="margin-left:90px;">
-													<h:outputText value="Moneda" style="color: #4C4C4C;font-size:13px;" />
+													<h:outputText value="Moneda"
+														style="color: #4C4C4C;font-size:13px;" />
 													<p:selectOneMenu id="idcombomoneda"
 														style="width: 60px;  font-size: 11px;"
 														value="#{recaudacionautovaluoarbitrioMB.arbitrio.moneda}">
@@ -232,7 +243,8 @@
 
 												</h:panelGrid>
 												<h:panelGrid columns="1" style="margin-left:30px;">
-													<h:outputText value="Monto a Pagar" style="color: #4C4C4C;font-size:13px;" />
+													<h:outputText value="Monto a Pagar"
+														style="color: #4C4C4C;font-size:13px;" />
 													<h:inputText id="idmonto" style="width:120px;"
 														value="#{recaudacionautovaluoarbitrioMB.arbitrio.monto}" />
 												</h:panelGrid>
@@ -240,9 +252,11 @@
 
 											<h:panelGrid columns="3" style="height:45px;">
 												<h:panelGrid columns="1">
-													<h:outputText value="Inquilino:" style="color: #4C4C4C;font-size:13px;"/>
+													<h:outputText value="Inquilino:"
+														style="color: #4C4C4C;font-size:13px;" />
 
-													<h:outputText id="idCajaInquilino" style="width:150px;" readonly="true"
+													<h:outputText id="idCajaInquilino" style="width:150px;"
+														readonly="true"
 														value="#{recaudacionautovaluoarbitrioMB.contratoSeleccionado.inquilino.nombrescompletos}"
 														effect="fade">
 													</h:outputText>
@@ -251,13 +265,14 @@
 											</h:panelGrid>
 
 											<br />
-											
+
 											<p:commandButton value="Guardar" style="margin-left:3px;"
 												onclick="validacionRecaudacionArbitrio();" />
-										<p:growl id="growlGrabadoExitoso" showDetail="true" sticky="true" />
+											<p:growl id="growlGrabadoExitoso" showDetail="true"
+												sticky="true" />
 
 										</div>
-										
+
 										<p:dialog header="Seleccione Upa" id="iddlgListaUpa"
 											width="655" height="300" closable="true" closeOnEscape="true"
 											resizable="false" widgetVar="iddlgListaUpa" modal="true"
@@ -613,14 +628,13 @@
 
 										</h:panelGrid>
 										<p:spacer height="20" />
-										
+
 									</div>
 
 
 
 									<h:form id="idTablaConsultaArbitrio">
-										<p:growl id="mensajex" showDetail="true" 
-											sticky="true" />
+										<p:growl id="mensajex" showDetail="true" sticky="true" />
 										<div class="exportarArbitrio">
 											<h:commandLink
 												actionListener="#{recaudacionautovaluoarbitrioMB.Excel}">
