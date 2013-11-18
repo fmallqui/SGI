@@ -40,7 +40,7 @@
 					</p:commandLink>
 					<p:commandLink id="idTab02" styleClass="btnDespacho"
 						onclick="funcionTab02();" update=":frmInstitucion">
-						<div class="btncentrado">Institucion</div>
+						<div class="btncentrado">Institución</div>
 					</p:commandLink>
 					<p:commandLink id="idTab03" styleClass="btnConsultas"
 						onclick="funcionTab03();" update=":frmAval">
@@ -48,12 +48,12 @@
 					</p:commandLink>
 					<p:commandLink id="idTab04" styleClass="btnConsultas"
 						onclick="funcionTab04();" update=":frmPeriodo">
-						<div class="btncentrado">Periodos</div>
+						<div class="btncentrado">Períodos</div>
 					</p:commandLink>
 
 					<p:commandLink id="idTab05" styleClass="btnConsultas"
 						onclick="funcionTab05();" update=":frmGarantias">
-						<div class="btncentrado">Garantia</div>
+						<div class="btncentrado">Garantía</div>
 					</p:commandLink>
 					<p:commandLink id="idTab06" styleClass="btnConsultas"
 						onclick="funcionTab06();">
@@ -316,7 +316,7 @@
 											<p:outputPanel id="idpanel">
 												<div class="filaDatoLargo">
 													<div class="filaDatoLargosCorto">
-														<h:outputText styleClass="lblDatos" value="Conservacion:" />
+														<h:outputText styleClass="lblDatos" value="Conservación:" />
 														<h:outputText styleClass="txtDatos"
 															id="idContratoConservacion"
 															value="#{ccMB.upa.conservacion}" />
@@ -324,7 +324,7 @@
 												</div>
 												<div class="filaDatoLargo">
 													<div class="filaDatoLargosCorto">
-														<h:outputText styleClass="lblDatos" value="Area Terreno:" />
+														<h:outputText styleClass="lblDatos" value="Área Terreno:" />
 														<h:outputText styleClass="txtDatos"
 															id="idContratoAreaTerreno"
 															value="#{ccMB.inmueble.areaterreno}" />
@@ -333,7 +333,7 @@
 												<div class="filaDatoLargo">
 													<div class="filaDatoLargosCorto">
 														<h:outputText styleClass="lblDatos"
-															value="Area Construida:" />
+															value="Área Construida:" />
 														<h:outputText styleClass="txtDatos"
 															id="idContratoAreaConstruida"
 															value="#{ccMB.inmueble.areaconstruida}" />
@@ -463,7 +463,7 @@
 													<p:ajax event="blur" listener="#{ccMB.calcularFecha}"
 														update="idContratoFechaFinContrato" />
 												</h:inputText>
-												<h:outputText styleClass="lblDatosContra2" value="Termino:"
+												<h:outputText styleClass="lblDatosContra2" value="Término:"
 													style="margin-left:90px;" />
 												<p:calendar id="idContratoFechaFinContrato"
 													rendered="#{ccMB.contrato.siocupante}"
@@ -478,7 +478,7 @@
 										<div class="filaDatoLargo">
 											<div class="filaDatoLargosCorto">
 												<h:outputText styleClass="lblDatos"
-													value="Fact. Renovacion:" />
+													value="Fact. Renovación:" />
 												<h:inputText styleClass="txtDatos" id="idContratoRenovacion"
 													value="#{ccMB.contrato.factrenovacion}" />
 											</div>
@@ -752,7 +752,7 @@
 									<p:dialog header="Cancelación de contrato"
 										id="dlgCancelarContrato" width="695" height="375"
 										closable="true" closeOnEscape="true" resizable="false"
-										modal="true" showEffect="slide" hideEffect="slide" modal="true"
+										modal="true" showEffect="slide" hideEffect="slide" 
 										widgetVar="dlgCancelarContrato"
 										style="border-width:9px;border-style:solid;  border-color:#ffc600; ">
 
@@ -965,7 +965,7 @@
 													</div>
 
 													<div class="filaDatoLargosCorto">
-														<h:outputText styleClass="lblDatos" value="Numero:" />
+														<h:outputText styleClass="lblDatos" value="Número:" />
 														<h:outputText styleClass="txtDatos" id="idContratoNumero"
 															value="#{ccMB.contrato.nrocontrato}" />
 													</div>
